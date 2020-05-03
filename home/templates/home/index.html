@@ -1,7 +1,55 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Index</h1>
+<div class="row">
+	<div class="col-sm-6">
+		<h2>Fish ({{fish_list|length}}) - {{now}}</h2>
+		{% if fish_list %}
+			<table class="table table-condensed">
+				<tr>
+					<th>&nbsp;</th>
+					<th>Name</th>
+					<th>Price</th>
+					<th>Location</th>
+					<th>Time</th>
+				</tr>
+				{% for fish in fish_list %}
+					<tr>
+						<td><a href="/fish/{{fish.id}}/" class="btn btn-primary btn-xs">View</a></td>
+						<td>{{fish.name}}</td>
+						<td>{{fish.price}}</td>
+						<td>{{fish.get_location_display}}</td>
+						{% if fish.all_day %}
+							<td>All Day</td>
+						{% else %}
+							<td>{{fish.start_time}}-{{fish.end_time}}</td>
+						{% endif %}
+					</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+	</div>
+	<div class="col-sm-6">
+		<h2>Bugs ({{bug_list|length}})</h2>
+		{% if bug_list %}
+			<table class="table table-condensed">
+				<tr>
+					<th>&nbsp;</th>
+					<th>Name</th>
+					<th>Price</th>
+				</tr>
+				{% for bug in bug_list %}
+					<tr>
+						<td><a href="/bug/{{bug.id}}/" class="btn btn-primary btn-xs">View</a></td>
+						<td>{{bug.name}}</td>
+						<td>{{bug.price}}</td>
+					</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+	</div>
+</div>
+
 {% endblock %}
 
 {% block page_scripts %}

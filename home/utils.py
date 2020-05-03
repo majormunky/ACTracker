@@ -1,8 +1,29 @@
 import csv
 import os
-import time
+import datetime
+import pytz
+from django.utils import timezone
 from django.conf import settings
 from home import models
+
+
+def get_things_active_now(thing_list, now):
+	result = []
+	midnight = datetime.time(0)
+	for thing in thing_list:
+		if thing.all_day:
+			result.append(thing)
+		if not thing.start_time:
+			continue
+		if thing.is_nocturnal():
+			if now < thing.end_time:
+				result.append(thing)
+			elif now > thing.start_time:
+				result.append(thing)
+		else:
+			if thing.start_time < now and thing.end_time > now:
+				result.append(thing)
+	return result
 
 
 def get_csv_contents(filepath):
