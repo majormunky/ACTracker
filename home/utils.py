@@ -47,11 +47,11 @@ def import_fish_from_csv():
 		if fish["Price"] == "" or fish["Price"] == " ":
 			price = 0
 		else:
-			price = fish["Price"]	
+			price = fish["Price"]
 
 		new_fish = models.Fish(
 			name=fish["Name"],
-			location=fish["Where"],
+			location=fish["Where"].lower(),
 			price=price,
 			january=fish_month_data["january"],
 			february=fish_month_data["february"],
