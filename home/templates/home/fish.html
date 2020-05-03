@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+	<h2>Fish</h2>
+	<br />
+	{% if fish_list %}
+		<table class="table">
+			{% for fish in fish_list %}
+				<tr>
+					<td>{{fish.name}}</td>
+					<td>{{fish.location}}</td>
+					<td>{{fish.start_time}}</td>
+					<td>{{fish.end_time}}</td>
+				</tr>
+			{% endfor %}
+		</table>
+	{% endif %}
+</div>	
+{% endblock %}
+
+{% block page_scripts %}
+
+{% endblock %}
+
+{% block page_styles %}
+
+{% endblock %}
