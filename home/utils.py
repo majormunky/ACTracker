@@ -91,7 +91,7 @@ def import_bugs_from_csv():
 		else:
 			price = bug["Price"]
 
-		new_bug = models.Fish(
+		new_bug = models.Bug(
 			name=bug["Name"],
 			price=price,
 			january=bug_month_data["january"],

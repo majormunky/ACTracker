@@ -5,4 +5,5 @@ from home import views
 urlpatterns = [
 	path('', views.index),
 	path('fish/', views.fish),
+	path('bugs/', views.bugs),
 ]

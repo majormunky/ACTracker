@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+	<h2>Bugs</h2>
+	<br />
+	{% if bug_list %}
+		<table class="table">
+			{% for bug in bug_list %}
+				<tr>
+					<td>{{bug.name}}</td>
+					<td>{{bug.start_time}}</td>
+					<td>{{bug.end_time}}</td>
+				</tr>
+			{% endfor %}
+		</table>
+	{% endif %}
+</div>	
+{% endblock %}
+
+{% block page_scripts %}
+
+{% endblock %}
+
+{% block page_styles %}
+
+{% endblock %}
