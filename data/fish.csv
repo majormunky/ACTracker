@@ -1,0 +1,41 @@
+Name,Price,Where,Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec
+Anchovy,200,Sea,X,X,X,X,X,X,X,X,X,X,X,X
+Barred Knifejaw,5000,Sea,,,X,X,X,X,X,X,X,X,X,
+Betta,2500,River,,,,,X,X,X,X,X,X,,
+Bitterling,,River,X,X,X,,,,,,,,X,X
+Black Bass,400,River,X,X,X,X,X,X,X,X,X,X,X,X
+Blue Marlin,10000,Pier,X,X,X,X,,,X,X,X,,X,X
+Bluegill,180,River,X,X,X,X,X,X,X,X,X,X,X,X
+Butterfly Fish,1000,Sea,,,,X,X,X,X,X,X,,,
+Carp,300,Pond,X,X,X,X,X,X,X,X,X,X,X,X
+Catfish,,Pond,,,,,X,X,X,X,X,X,,
+Cherry Salmon,,River (Clifftop),,,X,X,X,X,,,X,X,X,
+Clown Fish,650,Sea,,,,X,X,X,X,X,X,,,
+Crawfish,,Pond,,,,X,X,X,X,X,X,,,
+Crucian Carp,160,River,X,X,X,X,X,X,X,X,X,X,X,X
+Dab,300,Sea,X,X,X,X,,,,,,X,X,X
+Dace,240,River,X,X,X,X,X,X,X,X,X,X,X,X
+Football Fish,,Sea,X,X,X,,,,,,,,X,X
+Freshwater Goby,400,River,X,X,X,X,X,X,X,X,X,X,X,X
+Frog,120,Pond,,,,,X,X,X,X,,,,
+Goldfish,1300,Pond,X,X,X,X,X,X,X,X,X,X,X,X
+Guppy,1300,River,,,,X,X,X,X,X,X,X,X,
+Horse Mackerel,150,Sea,X,X,X,X,X,X,X,X,X,X,X,X
+Killifish,300,Pond,,,,X,X,X,X,X,,,,
+Koi,4000,Pond,X,X,X,X,X,X,X,X,X,X,X,X
+Loach,400,River,,,X,X,X,,,,,,,
+Neon Tetra,500,River,,,,X,X,X,X,X,X,X,X,
+Nibble Fish,1500,River,,,,,X,X,X,X,X,,,
+Oarfish,9000,Sea,X,X,X,X,X,,,,,,,X
+Olive Flounder,800,Sea,X,X,X,X,X,X,X,X,X,X,X,X
+Pale Chub,200,River,X,X,X,X,X,X,X,X,X,X,X,X
+Rainbowfish,800,River,,,,,X,X,X,X,X,X,,
+Red Snapper,3000,Sea,X,X,X,X,X,X,X,X,X,X,X,X
+Sea Bass,400,Sea,X,X,X,X,X,X,X,X,X,X,X,X
+Sea Butterfly,,Sea,X,X,X,X,,,,,,,,X
+Sea Horse,1100,Sea,,,,X,X,X,X,X,X,X,X,
+Squid,500,Sea,X,X,X,X,X,X,X,X,,,,X
+Surgeonfish,1000,Sea,,,,X,X,X,X,X,X,,,
+Tadpole, ,Pond,,,X,X,X,X,X,,,,,
+Yellow Perch,,River,X,X,X,,,,,,,X,X,X
+Zebra Turkeyfish,500,Sea,,,,X,X,X,X,X,X,X,X,
