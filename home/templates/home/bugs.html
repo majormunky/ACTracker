@@ -6,11 +6,16 @@
 	<br />
 	{% if bug_list %}
 		<table class="table">
+			<tr>
+				<th>&nbsp;</th>
+				<th>Name</th>
+				<th>Price</th>
+			</tr>
 			{% for bug in bug_list %}
 				<tr>
+					<td><a href="/bugs/{{bug.id}}/" class="btn btn-primary btn-xs">View</a></td>
 					<td>{{bug.name}}</td>
-					<td>{{bug.start_time}}</td>
-					<td>{{bug.end_time}}</td>
+					<td>{{bug.price}}</td>
 				</tr>
 			{% endfor %}
 		</table>

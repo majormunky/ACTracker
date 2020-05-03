@@ -53,7 +53,13 @@
 {% endblock %}
 
 {% block page_scripts %}
-
+<script>
+$(document).ready(function() {
+	setTimeout(function() {
+		window.location.reload(true);
+	}, 60000);
+});
+</script>
 {% endblock %}
 
 {% block page_styles %}

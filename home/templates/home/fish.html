@@ -6,12 +6,18 @@
 	<br />
 	{% if fish_list %}
 		<table class="table">
+			<tr>
+				<th>&nbsp;</th>
+				<th>Name</th>
+				<th>Location</th>
+				<th>Price</th>
+			</tr>
 			{% for fish in fish_list %}
 				<tr>
+					<td><a href="/fish/{{fish.id}}/" class="btn btn-primary btn-xs">View</a></td>
 					<td>{{fish.name}}</td>
-					<td>{{fish.location}}</td>
-					<td>{{fish.start_time}}</td>
-					<td>{{fish.end_time}}</td>
+					<td>{{fish.get_location_display}}</td>
+					<td>{{fish.price}}</td>
 				</tr>
 			{% endfor %}
 		</table>

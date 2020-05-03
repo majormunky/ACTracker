@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+	<div><a href="/bugs/" class="btn btn-primary">Back</a></div>
+	<h1>Bug: {{bug_data.name}}</h1>
+	<table class="details-table">
+		<tr>
+			<td>Name:</td>
+			<td>{{bug_data.name}}</td>
+		</tr>
+		<tr>
+			<td>Price:</td>
+			<td>{{bug_data.price}}</td>
+		</tr>
+		{% if bug_data.all_day %}
+			<tr>
+				<td>All Day:</td>
+				<td>True</td>
+			</tr>
+		{% else %}
+			<tr>
+				<td>Start Time:</td>
+				<td>{{bug_data.start_time}}</td>
+			</tr>
+			<tr>
+				<td>End Time:</td>
+				<td>{{bug_data.end_time}}</td>
+			</tr>
+		{% endif %}
+	</table>
+</div>
+{% endblock %}
+
+{% block page_scripts %}
+
+{% endblock %}
+
+{% block page_styles %}
+
+{% endblock %}
