@@ -72,3 +72,44 @@ def import_fish_from_csv():
 	print("Finished")
 	print("Created: {}".format(results["created"]))
 	print("Skipped: {}".format(results["skipped"]))
+
+
+def import_bugs_from_csv():
+	results = {"created": 0, "skipped": 0}
+	filepath = os.path.join(settings.BASE_DIR, "data", "bugs.csv")
+	bug_data = get_csv_contents(filepath)
+	for bug in bug_data:
+		existing_bug = models.Bug.objects.filter(name=bug["Name"])
+		if existing_bug:
+			results["skipped"] += 1
+			continue
+
+		bug_month_data = get_month_data(bug)
+		
+		if bug["Price"] == "" or bug["Price"] == " ":
+			price = 0
+		else:
+			price = bug["Price"]
+
+		new_bug = models.Fish(
+			name=bug["Name"],
+			price=price,
+			january=bug_month_data["january"],
+			february=bug_month_data["february"],
+			march=bug_month_data["march"],
+			april=bug_month_data["april"],
+			may=bug_month_data["may"],
+			june=bug_month_data["june"],
+			july=bug_month_data["july"],
+			august=bug_month_data["august"],
+			september=bug_month_data["september"],
+			october=bug_month_data["october"],
+			november=bug_month_data["november"],
+			december=bug_month_data["december"],
+		)
+		new_bug.save()
+		results["created"] += 1
+
+	print("Finished")
+	print("Created: {}".format(results["created"]))
+	print("Skipped: {}".format(results["skipped"]))
