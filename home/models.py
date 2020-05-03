@@ -37,7 +37,13 @@ class Fish(BaseItem):
 	def __str__(self):
 		return self.name
 
+	class Meta:
+		ordering = ("name",)
+
 
 class Bug(BaseItem):
 	name = models.CharField(max_length=128)
 	price = models.IntegerField()
+
+	class Meta:
+		ordering = ("name",)
