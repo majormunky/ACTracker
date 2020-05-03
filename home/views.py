@@ -1,8 +1,10 @@
 import datetime
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
+from django.http import JsonResponse
 from home import models
 from home import utils
+from home.api import serializers
 
 
 def index(request):
@@ -42,3 +44,15 @@ def fish_detail(request, pk):
 def bug_detail(request, pk):
 	bug_data = get_object_or_404(models.Bug, pk=pk)
 	return render(request, "home/bug_detail.html", {"bug_data": bug_data})
+
+
+def fish_json(request):
+	fish_list = models.Fish.objects.all()
+	fish_json = serializers.FishSerializer(fish_list, many=True).data
+	return JsonResponse({"fish_list": fish_json})
+
+
+def bugs_json(request):
+	bug_list = models.Bug.objects.all()
+	bug_json = serializers.BugSerializer(bug_list, many=True).data
+	return JsonResponse({"bug_list": bug_json})
