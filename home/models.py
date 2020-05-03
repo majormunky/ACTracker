@@ -17,9 +17,13 @@ class BaseItem(models.Model):
 
 	start_time = models.TimeField(blank=True, null=True)
 	end_time = models.TimeField(blank=True, null=True)
+	all_day = models.BooleanField(default=False)
 
 	class Meta:
 		abstract = True
+
+	def is_nocturnal(self):
+		return self.start_time > self.end_time
 
 
 class Fish(BaseItem):
@@ -47,3 +51,6 @@ class Bug(BaseItem):
 
 	class Meta:
 		ordering = ("name",)
+
+	def __str__(self):
+		return self.name
