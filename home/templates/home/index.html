@@ -37,12 +37,18 @@
 					<th>&nbsp;</th>
 					<th>Name</th>
 					<th>Price</th>
+					<th>Time</th>
 				</tr>
 				{% for bug in bug_list %}
 					<tr>
 						<td><a href="/bug/{{bug.id}}/" class="btn btn-primary btn-xs">View</a></td>
 						<td>{{bug.name}}</td>
 						<td>{{bug.price}}</td>
+						{% if bug.all_day %}
+							<td>All Day</td>
+						{% else %}
+							<td>{{bug.start_time}}-{{bug.end_time}}</td>
+						{% endif %}
 					</tr>
 				{% endfor %}
 			</table>
